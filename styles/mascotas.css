@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header{
@@ -12,13 +13,22 @@ header{
     padding: 5px;
 }
 
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+main{
+    padding-top: 15px;
+}
+
 .iconos{
     display: flex;
     gap: 40px;
     font-size: 18px;
 }
-
-
 
 li{
     list-style: none;
@@ -27,13 +37,24 @@ li{
 a{
     text-decoration: none;
     color: brown;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: rgb(243, 53, 53);
+    transition: 0.3s;
 }
 
 img{
     width: 150px;
 }
 
-.iconos a:hover{
-    color: red;
-    transform: translateY(5px);
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    height: 30px;
+    padding: 5px;
+    font-weight: bold;
 }
