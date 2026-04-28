@@ -1,0 +1,86 @@
+:root {
+  --color-principal: rgb(3, 57, 57);
+  --color-secundario: rgb(0, 71, 71);
+  --color-claro: rgb(120, 220, 190);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: var(--color-secundario);
+  color: white;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+section {
+  background: var(--color-principal);
+  color: white;
+  padding: 1rem;
+  border-top: 2px solid var(--color-secundario);
+}
+
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background: var(--color-claro);
+  color: black;
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+p { font-size: 1rem; }
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+}
+
+/* 📱 MÓVIL */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 📲 TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .proyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
